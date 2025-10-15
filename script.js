@@ -100,7 +100,7 @@ confirmButton.addEventListener('click', () => {
     } = formDataToSubmit;
 
     // Replace with your Google Apps Script web app URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJT2_5ZQjSwAl1qreLValgRliGyLbd8w6ppVDk3ahtk2BuZHf0neYs0MHqU-fwZWGJ9A/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw5zdQXOnX4AawnnIjCC_z-WIx_Jf7JY9a1GOKoBJ7nwFF1Lgtkf2IdHPR_2Ao1cIMb_A/exec';
 
     const url = `${scriptURL}?name=${encodeURIComponent(name)}&nxt_id=${encodeURIComponent(nxt_id)}&branch=${encodeURIComponent(branch)}&ntfy_id=${encodeURIComponent(ntfy_id)}&reason=${encodeURIComponent(reason)}`;
 
