@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Notifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Notifier</h1>
+        <p>Get your schedule update notifications directly on your phone.</p>
+
+        <h2>Steps to Follow</h2>
+        <ol>
+            <li>Install ntfy on your phone from the <a href="https://play.google.com/store/apps/details?id=io.heckel.ntfy">Play Store</a> or <a href="https://apps.apple.com/us/app/ntfy/id1625396347">App Store</a>.</li>
+            <li>Open the app.</li>
+            <li>Click on the "+" icon.</li>
+            <img src="image1.jpg" alt="Image 1" class="step-image">
+            <li>Give a name in the format "<em>&lt;name&gt;_alert</em>" and click on subscribe. (Don't click on any other option)</li>
+            <img src="image2.jpg" alt="Image 2" class="step-image">
+            <li>Send "<em>&lt;name&gt;_alert</em>" and other details in the below form.</li>
+        </ol>
+
+        <h2>Submit Your Details</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">NAME (provide the name which is shown on the timetable)*</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="nxt_id">NXT ID*</label>
+                <input type="text" id="nxt_id" name="nxt_id" required>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <input type="text" id="branch" name="branch">
+            </div>
+            <div class="form-group">
+                <label for="ntfy_id">ntfy subscription ID*</label>
+                <input type="text" id="ntfy_id" name="ntfy_id" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">GIVE ME A VALID REASON why I should add your name. If I am not satisfied, I will not add it.*</label>
+                <textarea id="reason" name="reason" rows="5" required></textarea>
+            </div>
+            <button type="button" id="submit-button">Submit</button>
+        </form>
+        <div id="form-message"></div>
+
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                <h2>Confirm Your Details</h2>
+                <div id="confirmation-details"></div>
+                <div class="modal-buttons">
+                    <button id="confirm-button" type="button">Confirm</button>
+                    <button id="cancel-button" type="button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
